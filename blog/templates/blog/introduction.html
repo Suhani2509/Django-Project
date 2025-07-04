@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titlepage %}Introduction{% endblock  %}
+
+{% block css %}
+<link rel='stylesheet' href="{% static 'blog/intro.css' %}" />
+{% endblock  %}
+
+{% block content %}
+<div class="section intro-section">
+    <h2 class="heading">Introduction</h2>
+    <div class="intro">
+        <img src="{% static 'blog/profilepic.png' %}" alt="profile" class='profilepic' />
+        <p>
+            Hii! My name is <b>Suhani Shinde</b>!<br/>
+            I am from Wagholi, Pune. I have completed a Diploma in Computer Science from JSPM College and currently I'm pursuing my Bachelor's degree in Computer Science.<br/><br/>
+            I have joined <b>Hematite Infotech Institute</b> to upscale and learn new skills in software development. I have completed a Full Stack Python course, learning front-end and back-end development including HTML, CSS, JavaScript, Python, Django, and MySQL.<br/><br/>
+            I also created a small web application using React.js. I'm looking forward to starting my career as a software developer and contributing to meaningful tech solutions.<br/>
+            <b>Thank You!</b>
+        </p>
+    </div>
+</div>
+
+<div class="section blog-section">
+    <center><h2 class="heading">Welcome to my Gaming Blog</h2></center>
+    <center><a href="{% url 'all-post' %}" class="redirect">All Our Gaming Posts</a></center>
+
+    <div class='latest-posts'>
+    {% for post in latest_post %}
+    <div class="card-container">
+        <div class="card-head">
+            <img src="{{post.image.url}}" alt="{{post.title}}"/>
+        </div>
+        <div class="card-body">
+            <h3>{{post.title}}</h3>
+            <p class="card-summary">{{post.summary}}</p>
+            <p class="card-date">{{post.date}}</p>
+        </div>
+    </div>
+    {% endfor %}
+    </div> 
+    
+</div>
+
+<div class="section about-section">
+    <h2 class="heading">About the Blog</h2>
+    <p class="about-text">
+        Welcome to our gaming blog — a space for all things gaming. From fast-paced shooters and fantasy RPGs to mobile hits and indie gems, we cover the digital gaming world.<br/><br/>
+        Our goal is to provide unbiased, informative content for gamers of all levels. Whether you're curious, casual, or competitive — we’ve got you covered.
+    </p>
+</div>
+
+<footer class="footer">
+    <a href={% url 'contact' %} class='contact'>Contact us</a>
+    <p><b>Contact:</b> 8788994706</p>
+    <p><b>Email:</b> <a class="footer-content" href="mailto:suhanishinde2509@gmail.com">suhanishinde2509@gmail.com</a></p>
+    <p><b>LinkedIn:</b> <a class="footer-content" href="https://www.linkedin.com/in/suhani-shinde">linkedin.com/in/suhani-shinde</a></p>
+    <p>© 2025 Gaming Blog. All rights reserved.</p>
+</footer>
+{% endblock %}

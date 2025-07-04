@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #f8f8f8;
+    text-shadow: 1px 4px 7px black;
+    text-align: center;
+    background-image:   linear-gradient(to right, rgb(172, 110, 230), rgba(0, 0, 255, 0.418), skyblue, pink);        
+
+}
+
+.thankyou-page{
+        justify-content: center;
+        /* align-items: center; */
+        justify-items: center;
+        margin-top: 210px;
+
+        
+        font-size: 25px;
+}

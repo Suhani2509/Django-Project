@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titlepage %}
+Blog Form
+{% endblock  %}
+{% block css %}
+<link rel='stylesheet' href="{% static 'blog/form.css' %}?v=1" />
+{% endblock  %}
+{% block content %}
+<h3>Add More Blogs</h3>
+<div class='form'>
+    <form action="/postform" method='POST' enctype='multipart/form-data'>
+        {% csrf_token %}
+        <div class="form-control">
+    {% for field in postform %}
+        {{field.label_tag}}
+        {{field}}
+        <br/><br/>
+    {% endfor %}
+    <center><button type='submit'>Submit</button></center>
+        </div>
+    </form>
+
+</div>
+{% endblock  %}
