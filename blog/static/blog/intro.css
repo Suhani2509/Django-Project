@@ -17,7 +17,15 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-
+.admin{
+  padding: 0;
+  margin: -10px;
+  text-align: right;
+}
+.admin-login{
+  font-size: 15px;
+  
+}
 .intro {
   max-width: 800px;
   margin: 40px auto;
@@ -101,6 +109,11 @@ body {
   justify-content: center;  
   margin: 20px ;
   /* max-width: 1000px; */
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-container {
@@ -200,8 +213,18 @@ body {
     border-radius: 5px;
     text-align: center;
 }
-.footer .contact{
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
+.footer .contact {
+  font-weight: bold;
+  color: #f4f6f8;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  border: 2px solid #f4f6f8;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.footer .contact:hover {
+  background-color: #f4f6f8;
+  color: #3c095c;
 }

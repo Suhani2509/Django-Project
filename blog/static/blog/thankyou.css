@@ -14,7 +14,20 @@ body{
         /* align-items: center; */
         justify-items: center;
         margin-top: 210px;
-
-        
         font-size: 25px;
+}
+a{
+    padding: 7px;
+    background-color: white;
+    border-radius: 7px;
+    text-decoration: none;
+    text-shadow: none;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    border: 1px solid blue;
+}
+
+a:hover{
+    background-color: rgb(214, 211, 211);
 }

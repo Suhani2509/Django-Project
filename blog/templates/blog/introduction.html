@@ -9,6 +9,7 @@
 
 {% block content %}
 <div class="section intro-section">
+    <p class='admin'><a href="{% url 'admin-dashboard' %}" class='admin-login'>Login as Admin ➡️</a></p>
     <h2 class="heading">Introduction</h2>
     <div class="intro">
         <img src="{% static 'blog/profilepic.png' %}" alt="profile" class='profilepic' />
@@ -28,6 +29,7 @@
 
     <div class='latest-posts'>
     {% for post in latest_post %}
+    <a class="card-link" href="{% url 'data-visualization' slug=post.slug %}">
     <div class="card-container">
         <div class="card-head">
             <img src="{{post.image.url}}" alt="{{post.title}}"/>
@@ -38,6 +40,7 @@
             <p class="card-date">{{post.date}}</p>
         </div>
     </div>
+    </a>
     {% endfor %}
     </div> 
     
@@ -52,7 +55,7 @@
 </div>
 
 <footer class="footer">
-    <a href={% url 'contact' %} class='contact'>Contact us</a>
+    <a href={% url 'contact' %} class='contact'>Get in Touch</a>
     <p><b>Contact:</b> 8788994706</p>
     <p><b>Email:</b> <a class="footer-content" href="mailto:suhanishinde2509@gmail.com">suhanishinde2509@gmail.com</a></p>
     <p><b>LinkedIn:</b> <a class="footer-content" href="https://www.linkedin.com/in/suhani-shinde">linkedin.com/in/suhani-shinde</a></p>

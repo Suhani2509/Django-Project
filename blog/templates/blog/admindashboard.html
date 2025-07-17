@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titlepage %}
+Admin Dashboard
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'blog/admin.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="admin-container">
+  <h2>🧾 Purchase History</h2>
+  <center><button class='more-post'><a href="{% url 'postform' %}">Post more blogs</a></button></center>
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Games Purchased</th>
+        <th>Total Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for purchase in details %}
+      <tr>
+        <td>{{ purchase.name }}</td>
+        <td>{{ purchase.email }}</td>
+        <td>{{ purchase.contact }}</td>
+        <td>{{ purchase.games_purchased }}</td>
+        <td>₹{{ purchase.total }}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="5" style="text-align: center;">No purchases found.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

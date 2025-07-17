@@ -15,6 +15,9 @@ Blog Form
     {% for field in postform %}
         {{field.label_tag}}
         {{field}}
+          {% if field.errors %}
+             <div class='error'>{{field.errors.0}}</div>
+          {% endif %}
         <br/><br/>
     {% endfor %}
     <center><button type='submit'>Submit</button></center>

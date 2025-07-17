@@ -3,7 +3,14 @@
       <div class="card-content">
         <div class="card-title"><h3>{{card.title}}</h3></div>
         <div class="card-text">{{card.summary | truncatewords:30}}</div>
-        <div class="card-date">{{card.date}}</div>
+        <span class="card-date">{{card.date}}</span>
+        <div class="card-price">₹{{card.price}}</div>
         <button class='card-button' type='button'><a href="{% url 'data-visualization' slug=card.slug %}">Read More</a></button>
+        <form method="POST" action="{% url 'addtocart' card.slug %}">
+      {% csrf_token %}
+      <input type="hidden" name="title" value="{{ card.title }}">
+      <input type="hidden" name="price" value="{{ card.price }}">
+      <button type="submit" class="card-purchase">Purchase</button>
+    </form>
       </div>
 </div>

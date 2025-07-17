@@ -1,0 +1,36 @@
+.thankyou-container {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.thankyou-container h1 {
+  font-size: 36px;
+  color: #6a0dad;
+  margin-bottom: 20px;
+}
+
+.thankyou-container p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.home-button {
+  background-color: #6a0dad;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #4b078a;
+}

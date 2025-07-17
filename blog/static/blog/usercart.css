@@ -1,0 +1,164 @@
+/* Body Styling */
+body {
+background-color: #f2f6ff;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 0;
+padding: 20px;
+color: #333;
+}
+
+/* Page Heading */
+h2 {
+text-align: center;
+font-size: 32px;
+color: #4b0082;
+margin-bottom: 30px;
+}
+
+/* Cart Items */
+ul {
+list-style: none;
+padding: 0;
+margin: 0 auto;
+max-width: 700px;
+}
+
+.cart-item {
+background-color: #fff;
+border-left: 6px solid #4b0082;
+padding: 16px 20px;
+margin: 12px 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+border-radius: 6px;
+}
+
+.cart-item span {
+font-size: 16px;
+font-weight: 500;
+}
+.total-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.total-container h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.total-box {
+  display: inline-block;
+  background-color: #f3f3f3;
+  color: #222;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.details{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.delete-item {
+margin-left: 10px;
+padding: 0;
+margin: 0;
+}
+
+.delete-btn {
+background: none;
+border: none;
+font-size: 20px;
+color: #e60000;
+cursor: pointer;
+transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+transform: scale(1.2);
+}
+
+/* Total Price */
+p {
+font-size: 20px;
+text-align: center;
+font-weight: bold;
+margin-top: 25px;
+}
+
+/* Purchase More Link */
+a {
+display: inline-block;
+text-align: center;
+margin: 12px auto;
+padding: 10px 25px;
+background-color: #4b0082;
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+border-radius: 6px;
+transition: background-color 0.3s ease;
+}
+
+a:hover {
+background-color: #5d0ab9;
+}
+
+/* Form Styling */
+form {
+max-width: 500px;
+background: #fff;
+padding: 25px;
+margin: 30px auto;
+border: 1px solid #ccc;
+border-radius: 10px;
+box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+form input {
+width: 100%;
+padding: 12px;
+margin-bottom: 20px;
+border-radius: 6px;
+border: 1px solid #bbb;
+font-size: 15px;
+}
+
+form input:focus {
+border-color: #4b0082;
+outline: none;
+box-shadow: 0 0 5px rgba(75, 0, 130, 0.2);
+}
+
+/* Buy Button */
+form button {
+width: 100%;
+padding: 12px;
+background-color: #4b0082;
+color: #fff;
+border: none;
+border-radius: 6px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+form button:hover {
+background-color: #5d0ab9;
+}
+
+ /* Error Message / */
+p[style="color: red"] {
+text-align: center;
+font-size: 14px;
+margin-top: 15px;
+}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titlepage %}
+Usercart Dashboard
+{% endblock %}
+
+{% block css %}
+<link rel='stylesheet' href="{% static 'blog/usercart.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<h2>🛒 Game Purchase Cart</h2>
+
+<ul>
+  {% for item in cart_items %}
+    <div class="cart-item">
+      <span>{{ item.game.title }} - ₹{{ item.game.price }}</span>
+      <form method='POST' class='delete-item' action="{% url 'remove-game' item.id %}">
+        {% csrf_token %}
+        <button type="submit" class="delete-btn" title="Remove">❌</button>
+      </form>
+    </div>
+  {% empty %}
+    <p style="text-align: center;">Your cart is empty. Go add some games!</p>
+    <center><a href="{% url 'all-post' %}"> Purchase games</a></center>
+  {% endfor %}
+</ul>
+
+{% if cart_items %}
+  <div class="total-container">
+  <h4>Total Amount</h4>
+  <div class="total-box">₹{{ total }}</div>
+</div>
+  <center><a href="{% url 'all-post' %}">+ Purchase more games</a></center>
+
+  <h3 class='details'>Enter your Details</h3>
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Enter your Name" required><br/>
+    <input type="email" name="email" placeholder="Enter your Email" required><br/>
+    <input type="text" name="contact" placeholder="Enter your Phone number" required><br/>
+    <button type="submit">Buy</button>
+    {% if error %}
+      <p style="color: red;">{{ error }}</p>
+    {% endif %}
+  </form>
+{% endif %}
+{% endblock %}

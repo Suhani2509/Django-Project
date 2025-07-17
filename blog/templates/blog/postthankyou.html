@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titlepage %}
+Post Success
+{% endblock  %}
+{% block css %}
+<link rel='stylesheet' href="{% static 'blog/blogthankyou.css' %}" />
+{% endblock  %}
+{% block content %}
+<div class='thankyou-page'>
+<h2>Thank You!!!</h2>
+    <p>Your Blog has been posted </p>
+</div>
+<div class="redirect">
+    <a href={% url 'postform' %}>Post another blog</a>
+    <a href={% url 'home' %}>Go to Home page</a>
+</div>
+{% endblock  %}

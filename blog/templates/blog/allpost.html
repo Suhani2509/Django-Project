@@ -4,7 +4,9 @@
 {% block css %}<link rel="stylesheet" href='{% static "blog/allpost.css" %}'/>{% endblock  %}
 {% block content %}
 <h1>🎮 Latest Game Blog Posts</h1>
-<center><button class='more-post'><a href="{% url 'postform' %}">Post more blogs</a></button></center>
+<center>
+  <button class='more-post'><a href="{% url 'usercart' %}">🛒 View My Cart</a></button>
+</center>
 
   <div class="blog-container">
     {% for card in cards %}
@@ -12,7 +14,7 @@
     {% endfor %}
   </div>
   <footer class="footer">
-    <a href={% url 'contact' %} class='contact'>Contact us</a>
+    <a href={% url 'contact' %} class='contact'>Get in Touch</a>
     <p><b>Contact:</b> 8788994706</p>
     <p><b>Email:</b> <a class="footer-content" href="mailto:suhanishinde2509@gmail.com">suhanishinde2509@gmail.com</a></p>
     <p><b>LinkedIn:</b> <a class="footer-content" href="https://www.linkedin.com/in/suhani-shinde">linkedin.com/in/suhani-shinde</a></p>

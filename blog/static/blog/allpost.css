@@ -74,6 +74,7 @@ h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: inline-block
 }
 .card-button:hover{
     background-color: rgb(181, 139, 221);
@@ -102,15 +103,57 @@ h1 {
   font-weight: bold;
   
 }
+.footer .contact{
+  padding: 5px 10px;
+  border: blueviolet 2px solid;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s ease;
+
+}
+.contact:hover{
+   background-color: blueviolet;
+   color: black;
+}
 
 .more-post {
     padding: 7px;
     background-color: blueviolet;
     border-radius: 5px;
     border: none;
+    display: inline-block;
+    margin: 10px;
 }
 .more-post a{
         color: white;
         font-weight: 800;
         text-decoration: none;
+}
+.more-post:hover{
+  background-color: rgb(85, 27, 139);
+}
+.card-price{
+  font-weight: bold;
+  font-size: 15px;
+  color:rgb(17, 136, 27);
+  display: inline-block;
+  margin-left: 170px;
+}
+.card-purchase{
+  padding: 4px 6px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+form{
+  display: inline;
+  margin-left: 146px;
+}
+.card-purchase:hover{
+ background-color: rgb(181, 139, 221);
 }

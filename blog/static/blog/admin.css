@@ -1,0 +1,56 @@
+.admin-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.admin-table th, .admin-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.admin-table th {
+  background-color: #2f72b7;
+  color: white;
+}
+
+.admin-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.admin-table tr:hover {
+  background-color: #f1f1f1;
+}
+.more-post {
+    padding: 7px;
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+    background-color: white;
+    display: inline-block;
+    margin: 10px;
+}
+.more-post a{
+        color: black;
+        font-weight: 800;
+        text-decoration: none;
+}
+.more-post,a:hover{
+  background-color: blueviolet;
+  color: white;
+}
